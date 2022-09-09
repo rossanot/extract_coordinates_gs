@@ -105,8 +105,8 @@ class GetCoord:
 			coord_raw = [atom.split() for atom in coord_raw]
 			coord_atnum = [self.dict_atm[str(atnum[1])] for atnum in coord_raw[:]]
 			coord_x = [x[3] for x in coord_raw[:]]
-			coord_y = [y[3] for y in coord_raw[:]]
-			coord_z = [z[3] for z in coord_raw[:]]
+			coord_y = [y[4] for y in coord_raw[:]]
+			coord_z = [z[5] for z in coord_raw[:]]
 			self.coord_file = list(zip(coord_atnum, coord_x, coord_y, coord_z))
 
 			return self.coord_file
